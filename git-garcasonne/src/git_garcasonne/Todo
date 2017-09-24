@@ -1,2 +1,28 @@
 TODO:
 
+Card-Class:
+int CardNumber
+int spielerNummerBesetzt mit [x] [y] koordinate (point)
+int [5][5] karte
+void drehen
+
+void display
+(grafisch überhaupt darstellen, mit verschiedenen farben)
+
+Player-Class:
+Punkte
+männchen im pool
+bin ich dran?
+
+GameManager:
+nächster spieler
+gucken ob punkte verteilt werden
+gucken ob männchen abgeschlossen sind
+
+CardHandler:
+ANFANG: feld mit dummikarten + anfangskarte füllen
+karten random ziehen und anzeigen
+checkt ob card angelegt werden kann
+
+Spielfeld:
+speichert karten

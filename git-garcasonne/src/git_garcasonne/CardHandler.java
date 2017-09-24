@@ -17,7 +17,6 @@ public class CardHandler
 	//Testfunction to check the card-array
 	public void printArray()
 	{
-		
 		System.out.println("Anzahl verschiedener Karten im System: " + m_iCardAmountTotal);
 		for(int i = 0; i < m_iCardAmountTotal; i++)
 		{

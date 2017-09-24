@@ -6,7 +6,7 @@ public class CardConstructor
 {
 	//processing different cardinformation from the input-file
 	public void read(CardHandler cardHandler) {
-		File anyFile = new File("C:/eclipse_test/text.txt");	
+		File anyFile = new File("C:/eclipse_test/textrichtig.txt");	
 		boolean bFirstLine = true;
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(anyFile));
@@ -33,18 +33,11 @@ public class CardConstructor
 			int iCardNumber = Integer.parseInt(strParse[0]);
 			int iCardAmount = Integer.parseInt(strParse[1]);
 			int[][] iArLandscape = new int[5][5];
-			//PROBLEM: iCardAmount ist noch nicht mit dabei!!!!! Array größer??
-			//TEST  -  Amount noch einfügen!
 			System.out.println("AMOUNT: " + iCardAmount);
 			for (int i = 0; i < 5; i++) {
 				iArLandscape[i] = analayseLandscape(strParse[i + 2]);
-				//!!!!!!!!PROBLEM: iCardAmount KANN AUCH die Stelle 2 und 3 im String haben, wenn es mehr als
-				//!!!!!!!9 verschiedene karten sind!!!!
-				for (int s = 0; s < 5; s++) {
-				//System.out.println(iArLandscape[i][s]);
-				cardHandler.fillArray(iCardNumber, i, s, iArLandscape[i][s]);
-				}
 			}
+			cardHandler.fillArrays(iCardNumber, iCardAmount, iArLandscape);
 		}
 	}
 

@@ -50,12 +50,10 @@ public class Game
 		GAME = scene_game;
 		MENU = scene_menu;
 		
-		//Read and save Cards
-		CardConstructor test = new CardConstructor ();
-		CardHandler CHTest = new CardHandler(Game.this);
-		test.read(CHTest);
-		CHTest.printArray();
-
+		//Read and load Cards
+		CardHandler CardHandler= new CardHandler(Game.this);
+		CardHandler.loadCards();
+	
 		stage.setTitle("Carcasonne");
 		stage.setScene(scene_menu);
 		stage.show();	

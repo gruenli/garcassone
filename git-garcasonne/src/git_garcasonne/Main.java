@@ -9,6 +9,7 @@ public class Main extends Application
 	public void start(Stage stage) throws Exception
 	{
 		Game game = new Game(stage);
+		//asdkljöl
 		System.out.println("TEST!!!");
 		System.out.println("**********GIT-VERSION***********");
 		System.out.println("**********First Upload***********");

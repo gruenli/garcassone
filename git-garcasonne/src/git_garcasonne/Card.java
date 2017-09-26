@@ -5,5 +5,6 @@ public class Card {
 	int[][] m_iArLandscape;
 	
 	//Keiner mag Leute die vorarbeiten!!!!
+	// test
 }
 

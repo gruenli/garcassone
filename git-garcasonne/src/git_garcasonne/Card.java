@@ -6,7 +6,7 @@ public class Card {
 	
 	//einen neuen kommentar
 	//asdasd
-
+	//nochmal
 
 	//Hallo Tommy!!!!
 }

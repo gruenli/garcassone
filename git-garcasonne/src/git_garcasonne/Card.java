@@ -5,7 +5,9 @@ public class Card {
 	int[][] m_iArLandscape;
 	
 // was neues
+
 //hahhahafhfahaf
 	//hhahahaha
+
 }
 

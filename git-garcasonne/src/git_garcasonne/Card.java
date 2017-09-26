@@ -4,10 +4,8 @@ public class Card {
 	int m_iCardNumber;
 	int[][] m_iArLandscape;
 	
-	//einen neuen kommentar
-	//asdasd
-	//nochmal
-
-	//Hallo Tommy!!!!
+// was neues
+//hahhahafhfahaf
+	//hhahahaha
 }
 

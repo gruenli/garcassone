@@ -23,6 +23,7 @@ CardHandler:
 ANFANG: feld mit dummikarten + anfangskarte füllen
 karten random ziehen und anzeigen
 checkt ob card angelegt werden kann
+muss in createGame aufgerufen werden, weil es zu einem Anzeigeobjekt gehört
 
 Spielfeld:
 speichert karten

@@ -1,5 +1,7 @@
 package git_garcasonne;
 
+import javafx.scene.layout.Pane;
+
 public class CardHandler 
 {
 	private int [] m_iArCardAmount; 
@@ -46,10 +48,12 @@ public class CardHandler
 		printArray();
 	}
 	
-	public void nextCard()
+	//TEST
+	public void nextCard(Pane pane)
 	{
 		
 	}
+	
 	CardHandler(Game game)
 	{
 		

@@ -1,13 +1,16 @@
 package git_garcasonne;
 
-public class Card {
-	int m_iCardNumber;
+public class Card
+{
+	int m_iCardNummmber;
+	int TESTERINO;
 	int[][] m_iArLandscape;
+	char hahahahaha;
 	
-// was neues
-
-//hahhahafhfahaf
-	//hhahahaha
+	public void displayCard()
+	{
+		//Mal anzeigen lassen
+	}
 
 }
 

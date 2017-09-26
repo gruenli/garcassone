@@ -1,29 +1,56 @@
 TODO:
 
-Card-Class:
-int CardNumber
-int spielerNummerBesetzt mit [x] [y] koordinate (point)
-int [5][5] karte
-void drehen
+Tommy:
 
-void display
-(grafisch überhaupt darstellen, mit verschiedenen farben)
+Card-Class: 
+	- int CardNumber
+	- int spielerNummerBesetzt mit [x] [y] koordinate (point)
+	- (0) für dummie
+	- int [5][5] karte
+	- void drehen
+	- public getLandscape
+	- (durchsuchfunktion);
 
-Player-Class:
-Punkte
-männchen im pool
-bin ich dran?
+	- void display ( Card card );
+	- 0 = grau (dummie)
+	- (grafisch überhaupt darstellen, mit verschiedenen farben)
 
-GameManager:
-nächster spieler
-gucken ob punkte verteilt werden
-gucken ob männchen abgeschlossen sind
+Player-Class: 
+	- Punkte
+	- name, nummer
+	- männchen im pool
+	- bin ich dran?
+	- machdeinenZug schnittstelle (Card card );
 
-CardHandler:
-ANFANG: feld mit dummikarten + anfangskarte füllen
-karten random ziehen und anzeigen
-checkt ob card angelegt werden kann
-muss in createGame aufgerufen werden, weil es zu einem Anzeigeobjekt gehört
+Niko:
 
-Spielfeld:
+GameManager: 
+	- nächster spieler
+	- gucken ob punkte verteilt werden
+	- gucken ob männchen abgeschlossen sind
+	- karte an spieler geben (vorher ziehen)
+
+
+CardHandler: 
+	- ANFANG: feld mit dummikarten + anfangskarte füllen
+	- karten random ziehen und anzeigen
+	- checkt ob card angelegt werden kann
+	- muss in createGame aufgerufen werden, weil es zu einem Anzeigeobjekt gehört
+
+
+
+
+
+cardHandler wird angelegt und lädt karten
+
+Spielfeld wird angelegt:
 speichert karten
+
+cardHandler füllt spielfeld mit dummiekarten
+
+gameManager angelegt( cardHandler, spielfeld );
+	GM legt spieler an;
+	GM holt karte und gibt spieler am anfang vom zug
+	
+spieler hat optionen die man im zug eben so hat
+

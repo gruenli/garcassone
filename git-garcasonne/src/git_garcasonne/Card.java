@@ -4,11 +4,14 @@ public class Card {
 	int m_iCardNumber;
 	int[][] m_iArLandscape;
 	
-// was neues
-	//einen neuen kommentar
-	//asdasd
-	//nochmal
-
-	//Hallo Tommy!!!!
+	public static int foo()
+	{
+		return 1;
+	}
+	public boolean test()
+	{
+		return true;
+	}
+	
 }
 

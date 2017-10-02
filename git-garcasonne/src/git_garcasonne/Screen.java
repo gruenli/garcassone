@@ -3,6 +3,7 @@ package git_garcasonne;
 import javafx.application.Platform;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.Pane;
 
 public class Screen
@@ -46,12 +47,26 @@ public class Screen
 		menu.setLayoutX(1210);
 		
 		Button startGame = new Button("Start the Game");
-		startGame.setOnAction(e -> GameManager.startGame(CardHandler));
+		startGame.setOnAction(e -> 
+		{ 
+			GameManager.startGame(CardHandler); 
+			switchScenes(3,game);
+		});
 		startGame.setLayoutX(110);
 		
 		game_pane.getChildren().addAll(menu, startGame);
 
 		return game_pane;
+	}
+	
+	public Parent createMap(Game game, Card [][] grid)
+	{
+		Pane map_pane = new Pane();
+		ScrollPane scrollpane = new ScrollPane();
+		scrollpane.setPrefSize(game.getWidth() + game.getPuffer(), game.getHeigth());
+		
+		map_pane.getChildren().addAll(scrollpane);
+		return map_pane;
 	}
 
 	//Scene-Manager
@@ -63,6 +78,9 @@ public class Screen
 				break;
 		case 2:	a=2;
 				game.getSTAGE().setScene(game.getGAME());
+				break;
+		case 3: a=3;
+				game.getSTAGE().setScene(game.getMAP());
 				break;
 		}
 	}	

@@ -6,10 +6,13 @@ public class GameManager {
 	Player[] PlayerArray;
 	Player activePlayer;
 	int active = 0;	
+	Card[] [] grid;
+	Game game;
 
-	GameManager(Game game)
+	GameManager(Game game, Card [][] grid)
 	{
-		
+		this.grid = grid;
+		this.game = game;
 	}
 	
 	public int getPlayerAmount() 
@@ -21,13 +24,13 @@ public class GameManager {
 	{
 				CardHandler.loadCards();
 				CardHandler.setIntCardsLeft(CardHandler.getSummOfAllCards());
-				
+				CardHandler.fillGrid(game.getXCards(), game.getYCards(), grid, scrollpane );
 				createPlayer(getPlayerAmount());
-				
+				createMap();
 				while (CardHandler.getIntCardsLeft() != 0)
 				{
 					
-					PlayerArray[active].makeMove(CardHandler.giveRandomCard());
+					//PlayerArray[active].makeMove(CardHandler.giveRandomCard());
 					checkPoints();
 					if(active < getPlayerAmount()-1)
 					{
@@ -73,6 +76,11 @@ public class GameManager {
 	{
 		//Gucken welcher Spieler wieviele Punklte bekommt und dann die AddPoints Funktion der 
 		//Spieler aufrufen
+	}
+	
+	public void createMap()
+	{
+		
 	}
 
 }

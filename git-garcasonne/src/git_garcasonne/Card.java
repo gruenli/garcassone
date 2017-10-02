@@ -1,7 +1,12 @@
 package git_garcasonne;
 
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+
 public class Card
 {
+	private Rectangle border = new Rectangle(80,80);
+	
 
 	int m_iCardNumber;
 	int[][] m_iArLandscape;
@@ -10,6 +15,20 @@ public class Card
 	{
 		m_iCardNumber = _iCardNumber;
 		m_iArLandscape = _iArLandscape;
+	}
+	
+	public Card()
+	{
+		m_iArLandscape = new int [5][5];
+		for (int y = 0; y < 5; y++)
+		{
+			for (int x = 0; x < 5; x++)
+			{
+				m_iArLandscape[y][x] = 5;
+			}
+		}
+		m_iCardNumber = 99;
+		border.setStroke(Color.ALICEBLUE);
 	}
 	
 	public int[][] getLandscape()

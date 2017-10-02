@@ -2,6 +2,7 @@ package git_garcasonne;
 
 
 
+import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 
 public class CardHandler 
@@ -72,19 +73,36 @@ public class CardHandler
 	
 	CardHandler(Game game)
 	{
-		
+		game = game;
 	}
-
+	
+	//NOCH NICHT FERTIG!!!
 	public Card giveRandomCard() {
-		//Random von 0 - iSummOfAllCards -1
+		
 		int rndNum = (int) (Math.random() * m_iCardAmountTotal);
+		//Checken ob gewählte Karte überhaupt noch im Pool ist, sonst neue Karte wählen!
 		Card card = new Card(rndNum, m_iArLandscape[rndNum] );
+		//Karte noch aus KartenPool entfernen!!!!!!!!! HOFFE DASS DAS STIMMT!
+		m_iArCardAmount[rndNum]--;
 		return card;
 	}
 	
 	public int getSummOfAllCards()
 	{
 		return iSummOfAllCards;
+	}
+	
+	public void fillGrid(int xCards, int yCards,Card[][] grid, )
+	{
+		for (int y = 0; y < yCards; y++)
+		{
+			for (int x = 0; x < xCards; x++)
+			{
+				Card card = new Card();
+				grid[x][y] = card;
+				
+			}
+		}
 	}
 	//NEEEEEEEEEEEEEEEEEEEEEEU!!!!!!!!!!!!!!
 }

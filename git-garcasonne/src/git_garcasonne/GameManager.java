@@ -27,7 +27,7 @@ public class GameManager {
 				while (CardHandler.getIntCardsLeft() != 0)
 				{
 					
-					PlayerArray[active].makeMove(CardHandler.giveRandomCard());
+			//		PlayerArray[active].makeMove(CardHandler.giveRandomCard());
 					checkPoints();
 					if(active < getPlayerAmount()-1)
 					{

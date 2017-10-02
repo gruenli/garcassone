@@ -7,9 +7,6 @@ Card-Class:
 	
 	- int spielerNummerBesetzt mit [x] [y] koordinate (point)
 	- (0) für dummie
-	- int [5][5] karte
-	- void drehen
-	- public getLandscape
 	- (durchsuchfunktion);
 
 	- void display ( Card card );
@@ -17,29 +14,17 @@ Card-Class:
 	- (grafisch überhaupt darstellen, mit verschiedenen farben)
 
 Player-Class: 
-	- boolean is active
-	- Punkte
-	- name, nummer
-	- männchen im pool
-	- bin ich dran?
 	- machdeinenZug schnittstelle (Card card );   <<<<<<<<<NIKO SCHNITTSTELLE
 ----------------------------------------------------------------------------------
 Niko:
 
 GameManager: 
-	- nächster spieler
 	- gucken ob punkte verteilt werden
 	- gucken ob männchen abgeschlossen sind
-	- karte an spieler geben (vorher ziehen)
-
 
 CardHandler: 
 	- ANFANG: feld mit dummikarten + anfangskarte füllen
-	- karten random ziehen und anzeigen
 	- checkt ob card angelegt werden kann
-	- muss in createGame aufgerufen werden, weil es zu einem Anzeigeobjekt gehört
-
-
 
 -----------------------------------------------------------------------------------
 

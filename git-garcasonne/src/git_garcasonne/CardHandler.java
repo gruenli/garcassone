@@ -1,5 +1,7 @@
 package git_garcasonne;
 
+
+
 import javafx.scene.layout.Pane;
 
 public class CardHandler 
@@ -8,6 +10,7 @@ public class CardHandler
 	private int m_iCardAmountTotal;
 	private int [][][] m_iArLandscape;
 	private int iCardsLeft;
+	private int iSummOfAllCards;
 	
 	//Change Array-Size depending on the total card amount 
 	public void initialize(int CardAmountTotal)
@@ -40,6 +43,8 @@ public class CardHandler
 	{
 		m_iArLandscape[iCardNumber] = iArLandscape;
 		m_iArCardAmount [iCardNumber] = iCardAmount;
+		iSummOfAllCards += iCardAmount;
+		
 	}
 
 	public void loadCards()
@@ -71,8 +76,15 @@ public class CardHandler
 	}
 
 	public Card giveRandomCard() {
-		Card card = new Card();
+		//Random von 0 - iSummOfAllCards -1
+		int rndNum = (int) (Math.random() * m_iCardAmountTotal);
+		Card card = new Card(rndNum, m_iArLandscape[rndNum] );
 		return card;
+	}
+	
+	public int getSummOfAllCards()
+	{
+		return iSummOfAllCards;
 	}
 	//NEEEEEEEEEEEEEEEEEEEEEEU!!!!!!!!!!!!!!
 }

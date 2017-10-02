@@ -3,10 +3,14 @@ package git_garcasonne;
 public class Card
 {
 	int m_iCardNummmber;
-	int TESTERINO;
 	int[][] m_iArLandscape;
-	char hahahahaha;
 	
+	Card(int rndNum, int[][] iArLandscape) 
+	{
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public static int foo()
 	{
 		return 1;

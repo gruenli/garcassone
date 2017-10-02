@@ -19,7 +19,6 @@ public class Screen
 		exit.setOnAction(e -> Platform.exit());
 		exit.setLayoutX(600);
 		
-		//NEEEEEEEEEEEEEEEEEEEEEEU!!!!!!!!!!!!!!
 		Button playerAmount1 = new Button("1 Player");
 		playerAmount1.setOnAction(e -> GameManager.setPlayerAmount(1));
 		playerAmount1.setLayoutX(100);
@@ -31,7 +30,6 @@ public class Screen
 		Button playerAmount3 = new Button("3 Players");
 		playerAmount3.setOnAction(e -> GameManager.setPlayerAmount(3));
 		playerAmount3.setLayoutX(300);
-		//NEEEEEEEEEEEEEEEEEEEEEEU!!!!!!!!!!!!!!
 		
 		menu_pane.getChildren().addAll(startgame,exit, playerAmount1, playerAmount2, playerAmount3);
 		return menu_pane;
@@ -48,7 +46,7 @@ public class Screen
 		menu.setLayoutX(1210);
 		
 		Button startGame = new Button("Start the Game");
-		startGame.setOnAction(e -> startGame(GameManager,CardHandler));
+		startGame.setOnAction(e -> GameManager.startGame(CardHandler));
 		startGame.setLayoutX(110);
 		
 		game_pane.getChildren().addAll(menu, startGame);
@@ -56,28 +54,6 @@ public class Screen
 		return game_pane;
 	}
 
-	//NEEEEEEEEEEEEEEEEEEEEEEU!!!!!!!!!!!!!!
-	public void startGame(GameManager GameManager, CardHandler CardHandler)
-	{
-			CardHandler.loadCards();
-			CardHandler.setIntCardsLeft(CardHandler.getICardAmountTotal());
-			
-			while (CardHandler.getIntCardsLeft() != 0)
-			{
-				if(CardHandler.getIntCardsLeft() == CardHandler.getICardAmountTotal())
-				{
-					GameManager.createPlayer(GameManager.getPlayerAmount());
-					GameManager.startGame();
-				}
-				//Hier vielleicht gameManeger.getActivePlayer(player, player2) ... mal gucken!
-				//player.getActiveplayer().makeMove(CardHandler.giveRandomCard());
-				//GameManager.checkPoints(GameManager.getActivePlayer(player, player2));
-				CardHandler.setIntCardsLeft(CardHandler.getIntCardsLeft()-1);
-			}
-			GameManager.endGame();
-	}
-	//NEEEEEEEEEEEEEEEEEEEEEEU!!!!!!!!!!!!!!
-		
 	//Scene-Manager
 	public void switchScenes(int a, Game game)
 	{

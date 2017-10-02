@@ -4,6 +4,7 @@ Tommy:
 
 Card-Class: 
 	- int CardNumber
+	
 	- int spielerNummerBesetzt mit [x] [y] koordinate (point)
 	- (0) für dummie
 	- int [5][5] karte
@@ -16,6 +17,7 @@ Card-Class:
 	- (grafisch überhaupt darstellen, mit verschiedenen farben)
 
 Player-Class: 
+	- boolean is active
 	- Punkte
 	- name, nummer
 	- männchen im pool

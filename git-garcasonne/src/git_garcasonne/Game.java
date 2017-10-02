@@ -40,7 +40,7 @@ public class Game
 
 	Game(Stage stage)
 	{
-		CardHandler CardHandler= new CardHandler(Game.this);
+		CardHandler CardHandler = new CardHandler(Game.this);
 		GameManager GameManager = new GameManager(Game.this);
 		
 		Screen screen = new Screen();

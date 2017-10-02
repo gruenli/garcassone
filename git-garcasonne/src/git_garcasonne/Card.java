@@ -2,10 +2,24 @@ package git_garcasonne;
 
 public class Card
 {
+<<<<<<< HEAD
 	int m_iCardNumber;
+=======
+	int m_iCardNummmber;
+>>>>>>> branch 'master' of https://github.com/gruenli/garcassone.git
 	int[][] m_iArLandscape;
 	
+<<<<<<< HEAD
 	public Card( int _iCardNumber, int[][] _iArLandscape )
+=======
+	Card(int rndNum, int[][] iArLandscape) 
+	{
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public static int foo()
+>>>>>>> branch 'master' of https://github.com/gruenli/garcassone.git
 	{
 		m_iCardNumber = _iCardNumber;
 		m_iArLandscape = _iArLandscape;

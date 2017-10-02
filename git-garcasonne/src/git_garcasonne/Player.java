@@ -2,6 +2,7 @@ package git_garcasonne;
 
 public class Player {
 	
+<<<<<<< HEAD
 	private int m_iPoints;
 	private int m_iNumber;
 	private String m_strName;
@@ -29,5 +30,21 @@ public class Player {
 	
 	
 	
+=======
+	Player (int i)
+	{
+		
+	}
+	
+	void makeMove(Card card)
+	{
+		
+	}
+	
+	void addPoints(int pointsToAdd)
+	{
+		
+	}
+>>>>>>> branch 'master' of https://github.com/gruenli/garcassone.git
 
 }

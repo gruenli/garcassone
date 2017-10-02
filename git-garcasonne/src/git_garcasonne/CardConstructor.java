@@ -33,7 +33,7 @@ public class CardConstructor
 			int iCardNumber = Integer.parseInt(strParse[0]);
 			int iCardAmount = Integer.parseInt(strParse[1]);
 			int[][] iArLandscape = new int[5][5];
-			System.out.println("AMOUNT: " + iCardAmount);
+			//System.out.println("AMOUNT: " + iCardAmount);		//TESTING ONLY
 			for (int i = 0; i < 5; i++) {
 				iArLandscape[i] = analayseLandscape(strParse[i + 2]);
 			}

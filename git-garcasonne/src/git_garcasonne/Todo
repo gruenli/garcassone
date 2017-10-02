@@ -20,8 +20,8 @@ Player-Class:
 	- name, nummer
 	- männchen im pool
 	- bin ich dran?
-	- machdeinenZug schnittstelle (Card card );
-
+	- machdeinenZug schnittstelle (Card card );   <<<<<<<<<NIKO SCHNITTSTELLE
+----------------------------------------------------------------------------------
 Niko:
 
 GameManager: 
@@ -39,7 +39,7 @@ CardHandler:
 
 
 
-
+-----------------------------------------------------------------------------------
 
 cardHandler wird angelegt und lädt karten
 

@@ -7,6 +7,7 @@ public class CardHandler
 	private int [] m_iArCardAmount; 
 	private int m_iCardAmountTotal;
 	private int [][][] m_iArLandscape;
+	private int iCardsLeft;
 	
 	//Change Array-Size depending on the total card amount 
 	public void initialize(int CardAmountTotal)
@@ -45,17 +46,33 @@ public class CardHandler
 	{
 		CardConstructor CardConstructor = new CardConstructor();
 		CardConstructor.read(this);
-		printArray();
+		//printArray();
 	}
 	
-	//TEST
-	public void nextCard(Pane pane)
+	//NEEEEEEEEEEEEEEEEEEEEEEU!!!!!!!!!!!!!!
+	public int getICardAmountTotal()
 	{
-		
+		return m_iCardAmountTotal;
 	}
+	public int getIntCardsLeft()
+	{
+		return iCardsLeft;
+	}
+	
+	public void setIntCardsLeft(int cardsleft)
+	{
+		iCardsLeft = cardsleft;
+	}
+	
 	
 	CardHandler(Game game)
 	{
 		
 	}
+
+	public Card giveRandomCard() {
+		Card card = new Card();
+		return card;
+	}
+	//NEEEEEEEEEEEEEEEEEEEEEEU!!!!!!!!!!!!!!
 }

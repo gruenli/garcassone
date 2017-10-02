@@ -40,22 +40,19 @@ public class Game
 
 	Game(Stage stage)
 	{
-		Screen screen = new Screen();
-		STAGE = stage;
+		CardHandler CardHandler= new CardHandler(Game.this);
+		GameManager GameManager = new GameManager(Game.this);
 		
-		//Different Ingame-Windows
-		Scene scene_game = new Scene(screen.createGame(Game.this));
-		Scene scene_menu = new Scene(screen.createMenu(Game.this));
-
+		Screen screen = new Screen();
+		Scene scene_game = new Scene(screen.createGame(Game.this, GameManager, CardHandler));
+		Scene scene_menu = new Scene(screen.createMenu(Game.this, GameManager));
+		
+		STAGE = stage;
 		GAME = scene_game;
 		MENU = scene_menu;
-		
-		//Read and load Cards
-		CardHandler CardHandler= new CardHandler(Game.this);
-		CardHandler.loadCards();
-	
+
 		stage.setTitle("Carcasonne");
 		stage.setScene(scene_menu);
-		stage.show();	
+		stage.show();
 	}
 }

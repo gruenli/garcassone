@@ -24,6 +24,8 @@ public class Player {
 		m_strName = _strName;
 	}
 	
+	
+	
 }	
 	
 	

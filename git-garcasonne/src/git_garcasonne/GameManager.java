@@ -6,13 +6,15 @@ public class GameManager {
 	Player[] PlayerArray;
 	Player activePlayer;
 	int active = 0;	
-	Card[] [] grid;
+	Card[][] grid;
 	Game game;
+	CardHandler CardHandler;
 
-	GameManager(Game game, Card [][] grid)
+	GameManager(Game game, Card [][] grid, CardHandler CardHandler)
 	{
 		this.grid = grid;
 		this.game = game;
+		this.CardHandler = CardHandler;
 	}
 	
 	public int getPlayerAmount() 
@@ -20,11 +22,10 @@ public class GameManager {
 		return iPlayerAmount;
 	}
 	
-	public void startGame(CardHandler CardHandler)
+	public void startGame()
 	{
 				CardHandler.loadCards();
 				CardHandler.setIntCardsLeft(CardHandler.getSummOfAllCards());
-				CardHandler.fillGrid(game.getXCards(), game.getYCards(), grid, scrollpane );
 				createPlayer(getPlayerAmount());
 				createMap();
 				while (CardHandler.getIntCardsLeft() != 0)

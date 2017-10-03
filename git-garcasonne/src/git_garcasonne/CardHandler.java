@@ -1,12 +1,12 @@
 package git_garcasonne;
 
-
-
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 
 public class CardHandler 
 {
+	private final int m_tileSize = 80;
 	private int [] m_iArCardAmount; 
 	private int m_iCardAmountTotal;
 	private int [][][] m_iArLandscape;
@@ -55,11 +55,11 @@ public class CardHandler
 		//printArray();
 	}
 	
-	//NEEEEEEEEEEEEEEEEEEEEEEU!!!!!!!!!!!!!!
 	public int getICardAmountTotal()
 	{
 		return m_iCardAmountTotal;
 	}
+	
 	public int getIntCardsLeft()
 	{
 		return iCardsLeft;
@@ -69,7 +69,6 @@ public class CardHandler
 	{
 		iCardsLeft = cardsleft;
 	}
-	
 	
 	CardHandler(Game game)
 	{
@@ -87,22 +86,21 @@ public class CardHandler
 		return card;
 	}
 	
-	public int getSummOfAllCards()
+	//Grid wird mit Dummikarten (5555555 usw ) gefüllt!
+	public void fillGrid(int xCards, int yCards,Card[][] grid )
 	{
-		return iSummOfAllCards;
-	}
-	
-	public void fillGrid(int xCards, int yCards,Card[][] grid, )
-	{
+		
 		for (int y = 0; y < yCards; y++)
 		{
 			for (int x = 0; x < xCards; x++)
 			{
-				Card card = new Card();
-				grid[x][y] = card;
-				
+				grid[x][y] = new Card( x, y, m_tileSize );
 			}
 		}
 	}
-	//NEEEEEEEEEEEEEEEEEEEEEEU!!!!!!!!!!!!!!
+	
+	public int getSummOfAllCards()
+	{
+		return iSummOfAllCards;
+	}
 }

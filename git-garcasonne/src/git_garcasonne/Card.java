@@ -1,15 +1,17 @@
 package git_garcasonne;
 
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
-public class Card
+public class Card extends StackPane
 {
-	private Rectangle border = new Rectangle(80,80);
-	
-
+	private Rectangle m_border;
 	int m_iCardNumber;
 	int[][] m_iArLandscape;
+	int m_xPos;
+	int m_yPos;
+	int m_tileSize;
 
 	public Card( int _iCardNumber, int[][] _iArLandscape )
 	{
@@ -17,7 +19,8 @@ public class Card
 		m_iArLandscape = _iArLandscape;
 	}
 	
-	public Card()
+	//Konstruktor für Dummicards
+	public Card(int _xPos, int _yPos, int tileSize)
 	{
 		m_iArLandscape = new int [5][5];
 		for (int y = 0; y < 5; y++)
@@ -28,7 +31,16 @@ public class Card
 			}
 		}
 		m_iCardNumber = 99;
-		border.setStroke(Color.ALICEBLUE);
+		m_xPos = _xPos;
+		m_yPos = _yPos;
+		m_tileSize = tileSize;
+		m_border = new Rectangle( m_tileSize-2, m_tileSize-2 );
+		m_border.setStroke(Color.ALICEBLUE);
+		
+		setTranslateX( m_xPos * m_tileSize);
+		setTranslateY( m_yPos * m_tileSize);
+
+		getChildren().add(m_border);
 	}
 	
 	public int[][] getLandscape()

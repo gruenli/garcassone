@@ -7,29 +7,28 @@ import javafx.scene.control.ScrollPane;
 
 public class Game 
 {
-	private int iWidth = 1200;
-	private int iHeigth = 900;
-	private int iPuffer = 200;
-	private static final int iXCards = 50;
-	private static final int iYCards = 50;
-	private Card [][] grid = new Card[iXCards][iYCards];
-
+	private final int iWidth = 1200;
+	private final int iHeigth = 900;
+	private final int iPuffer = 200;
+	private static final int iXCards = 5;
+	private static final int iYCards = 5;
 	
-	Stage STAGE;
-	Scene GAME;
-	Scene MENU;
-	Scene MAP;
+	private Card [][] grid = new Card[iXCards][iYCards];
+	
+	private Stage STAGE;
+	private Scene GAME;
+	private Scene MENU;
+	private Scene MAP;
+	private Screen screen;
 	
 	public int getXCards()
 	{
 		return iXCards;
 	}
-	
 	public int getYCards()
 	{
 		return iYCards;
 	}
-	
 	public int getWidth()
 	{
 		return iWidth;
@@ -58,27 +57,26 @@ public class Game
 	{
 		return MAP;
 	}
+	public Screen getScreen()
+	{
+		return screen;
+	}
 	
 
 	Game(Stage stage)
 	{
 		CardHandler CardHandler = new CardHandler(this);
-		GameManager GameManager = new GameManager(this, grid);
-
+		CardHandler.fillGrid(iXCards, iYCards, grid);
+		GameManager GameManager = new GameManager(this, grid, CardHandler);
 		
-		Screen screen = new Screen();
-		Scene scene_game = new Scene(screen.createGame(this, GameManager, CardHandler));
-		Scene scene_menu = new Scene(screen.createMenu(this, GameManager));
-		Parent map_pane = screen.createMap(this, grid);
-		Scene scene_map = new Scene( map_pane);
-		
+		Screen screen = new Screen( this, GameManager);
 		STAGE = stage;
-		GAME = scene_game;
-		MENU = scene_menu;
-		MAP = scene_map;
-
+		GAME = new Scene(screen.createGame());
+		MENU = new Scene(screen.createMenu());
+		MAP = new Scene( screen.createMap(grid));
+		
 		stage.setTitle("Carcasonne");
-		stage.setScene(scene_menu);
+		stage.setScene(MENU);
 		stage.show();
 	}
 }

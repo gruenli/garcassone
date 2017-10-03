@@ -7,12 +7,10 @@ public class Player {
 	private String m_strName;
 	private int m_iPawn;
 	
-	// Konstruktor
 	public Player( int _iNumber )
 	{
 		m_iNumber = _iNumber;
 	}
-	
 	
 	void addPoints( int iPoints )
 	{
@@ -23,8 +21,6 @@ public class Player {
 	{
 		m_strName = _strName;
 	}
-	
-	
 	
 }	
 	

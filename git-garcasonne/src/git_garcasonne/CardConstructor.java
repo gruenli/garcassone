@@ -16,7 +16,6 @@ public class CardConstructor
 					processInput(strLine, bFirstLine, cardHandler);
 					bFirstLine = false;
 				}
-
 			} finally {
 				reader.close();
 			}

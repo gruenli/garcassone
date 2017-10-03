@@ -6,12 +6,19 @@ import javafx.scene.layout.Pane;
 
 public class CardHandler 
 {
-	private final int m_tileSize = 80;
+	private int m_iTileSize;
 	private int [] m_iArCardAmount; 
 	private int m_iCardAmountTotal;
 	private int [][][] m_iArLandscape;
 	private int iCardsLeft;
 	private int iSummOfAllCards;
+	
+	public CardHandler( int _iTileSize )
+	{
+		m_iTileSize = _iTileSize;
+	}
+	
+	
 	
 	//Change Array-Size depending on the total card amount 
 	public void initialize(int CardAmountTotal)
@@ -70,10 +77,7 @@ public class CardHandler
 		iCardsLeft = cardsleft;
 	}
 	
-	CardHandler(Game game)
-	{
-		game = game;
-	}
+
 	
 	//NOCH NICHT FERTIG!!!
 	public Card giveRandomCard() {
@@ -94,7 +98,7 @@ public class CardHandler
 		{
 			for (int x = 0; x < xCards; x++)
 			{
-				grid[x][y] = new Card( x, y, m_tileSize );
+				grid[x][y] = new Card( x, y, m_iTileSize );
 			}
 		}
 	}

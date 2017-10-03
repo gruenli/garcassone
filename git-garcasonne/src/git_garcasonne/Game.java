@@ -10,8 +10,11 @@ public class Game
 	private final int iWidth = 1200;
 	private final int iHeigth = 900;
 	private final int iPuffer = 200;
-	private static final int iXCards = 5;
-	private static final int iYCards = 5;
+	
+	private static final int tileSize = 10;
+	
+	private static final int iXCards = 120;
+	private static final int iYCards = 90;
 	
 	private Card [][] grid = new Card[iXCards][iYCards];
 	
@@ -65,7 +68,7 @@ public class Game
 
 	Game(Stage stage)
 	{
-		CardHandler CardHandler = new CardHandler(this);
+		CardHandler CardHandler = new CardHandler( tileSize );
 		CardHandler.fillGrid(iXCards, iYCards, grid);
 		GameManager GameManager = new GameManager(this, grid, CardHandler);
 		

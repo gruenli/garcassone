@@ -92,7 +92,7 @@ public class CardHandler
 		return iSummOfAllCards;
 	}
 	
-	public void fillGrid(int xCards, int yCards,Card[][] grid, )
+	public void fillGrid(int xCards, int yCards,Card[][] grid)
 	{
 		for (int y = 0; y < yCards; y++)
 		{

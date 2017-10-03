@@ -62,10 +62,11 @@ public class Screen
 	public Parent createMap(Game game, Card [][] grid)
 	{
 		Pane map_pane = new Pane();
-		ScrollPane scrollpane = new ScrollPane();
-		scrollpane.setPrefSize(game.getWidth() + game.getPuffer(), game.getHeigth());
+		map_pane.setPrefSize(800,  600);
 		
-		map_pane.getChildren().addAll(scrollpane);
+		
+		
+		
 		return map_pane;
 	}
 
@@ -80,7 +81,7 @@ public class Screen
 				game.getSTAGE().setScene(game.getGAME());
 				break;
 		case 3: a=3;
-				game.getSTAGE().setScene(game.getMAP());
+				//game.getSTAGE().setScene(game.getMAP());
 				break;
 		}
 	}	

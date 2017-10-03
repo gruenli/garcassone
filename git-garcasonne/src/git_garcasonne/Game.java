@@ -69,13 +69,10 @@ public class Game
 		Screen screen = new Screen();
 		Scene scene_game = new Scene(screen.createGame(this, GameManager, CardHandler));
 		Scene scene_menu = new Scene(screen.createMenu(this, GameManager));
-		Parent map_pane = screen.createMap(this, grid);
-		Scene scene_map = new Scene( map_pane);
 		
 		STAGE = stage;
 		GAME = scene_game;
 		MENU = scene_menu;
-		MAP = scene_map;
 
 		stage.setTitle("Carcasonne");
 		stage.setScene(scene_menu);

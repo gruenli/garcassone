@@ -24,7 +24,7 @@ public class GameManager {
 	{
 				CardHandler.loadCards();
 				CardHandler.setIntCardsLeft(CardHandler.getSummOfAllCards());
-				CardHandler.fillGrid(game.getXCards(), game.getYCards(), grid, scrollpane );
+				CardHandler.fillGrid(game.getXCards(), game.getYCards(), grid);
 				createPlayer(getPlayerAmount());
 				createMap();
 				while (CardHandler.getIntCardsLeft() != 0)
